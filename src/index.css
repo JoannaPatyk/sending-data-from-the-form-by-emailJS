@@ -2,16 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #fefefe;
+    outline: none;
+    font-weight: 100;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
+    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .contact-form {
@@ -24,7 +27,7 @@
 }
 
 h2 {
-    color: #222;
+    color: #222222;
 }
 
 .input,
@@ -33,7 +36,8 @@ h2 {
     margin: 1rem 0;
     padding-left: 1rem;
     font-size: 1.2rem;
-    border: 1px solid #222;
+    letter-spacing: 1px;
+    border: 1px solid #222222;
 }
 
 .input::placeholder,
@@ -59,9 +63,9 @@ h2 {
 }
 
 .form-control p {
-    margin-left: 2.2rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
+    margin-left: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .btn {
@@ -69,16 +73,53 @@ h2 {
     padding: 0.5rem 2rem;
     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.25rem;
-    color: tomato;
-    border: 2px solid tomato;
+    color: #fefefe;
+    background-color: #ff6347;
+    border: 2px solid #ff6347;
     transition: 0.5s;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: tomato;
-    color: #fefefe;
+    background-color: #fefefe;
+    color: #ff6347;
     transform: scale(0.95);
+}
+
+a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    border-bottom: 2px solid #ff6347;
+}
+
+.background-light {
+    position: absolute;
+    top: -10%;
+    left: -85%;
+    width: 180vw;
+    height: 120vh;
+    z-index: -1;
+    transform: rotate(40deg);
+    background-color: rgba(255, 147, 128, 0.808);
+}
+
+.background-dark {
+    position: absolute;
+    top: 30%;
+    right: -100%;
+    width: 180vw;
+    height: 120vh;
+    z-index: -10;
+    transform: rotate(-40deg);
+    background-color: rgba(116, 48, 36, 0.808);
+}
+
+button:disabled {
+    cursor: not-allowed;
 }
